@@ -2,10 +2,30 @@ import React, { useEffect, useState } from 'react'
 import { axiosEcommerce } from '../../utils/configAxios'
 import SimilarProducts from './SimilarProducts'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 const ProductDetail = ({productId}) => {
 
-    const [productData, setProductData] = useState()
+    const [productData, setProductData] = useState();
+    const [counter, setCounter] = useState(1);
+    
+    const dispatch = useDispatch()
+
+    const handleClickPlus = () => {
+        const newCounter = counter + 1
+        setCounter(newCounter)
+    }
+
+    const handleClickLess = () => {
+        const newCounter = counter - 1
+        if(newCounter > 0) {
+            setCounter(newCounter)
+        }
+    }
+
+    const handleClickAddToCart = () => {
+        dispatch(addProductcart({quantity: counter, productId: productData.id }));
+    };
 
     useEffect(() => {
         axiosEcommerce
@@ -43,14 +63,14 @@ const ProductDetail = ({productId}) => {
         <article>
             <h4 className='text-gray-400 font-bold'>Quantity</h4>
             <div className='flex items-center'>
-                <button className='border-[1px] p-2 px-4 hover:bg-red-500 hover:text-white transition-colors '>-</button>
-                <span className='border-[1px] p-2 px-4 border-x-0 '>1</span>
-                <button className='border-[1px] p-2 px-4 hover:bg-red-500 hover:text-white transition-colors '>+</button>
+                <button onClick={handleClickLess} className='border-[1px] p-2 px-4 hover:bg-red-500 hover:text-white transition-colors '>-</button>
+                <span className='border-[1px] p-2 px-4 border-x-0 '>{counter}</span>
+                <button onClick={handleClickPlus} className='border-[1px] p-2 px-4 hover:bg-red-500 hover:text-white transition-colors '>+</button>
             </div>
         </article>
         </section>
 
-        <button className='w-full bg-red-500 py-2 text-white font-bold hover:bg-red-400 transition-colors rounded-sm mt-6'>
+        <button onClick={handleClickAddToCart} className='w-full bg-red-500 py-2 text-white font-bold hover:bg-red-400 transition-colors rounded-sm mt-6'>
             Add to cart <i className='bx bx-cart'></i>
         </button>
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch,  useSelector } from "react-redux";
-import { changeIsShowCart, getCartProducts } from "../../slices/cart.slice";
+import { changeIsShowCart, getCartProducts, purchaseCart } from "../../slices/cart.slice";
 import CartProduct from "./CartProduct";
 
 const Cart = () => {
@@ -13,6 +13,10 @@ const Cart = () => {
   };
 
   const totalPrice = products.reduce(( acc, curr ) => acc + curr.quantity * (curr.product.price), 0)
+
+  const handleClickCheckout = () => {
+    dispatch(purchaseCart())
+  }
 
   useEffect(() => {
     if (isShowCart) {
@@ -37,7 +41,7 @@ const Cart = () => {
       ></i>
 
       {/* products of cartshop */}
-      <section className="overflow-y-auto grid gap-10 py-4">
+      <section className="overflow-y-auto grid gap-10 py-4 content-start">
         {products.map((product) => (
           <CartProduct key={product.id} product={product} />
         ))}
@@ -47,7 +51,7 @@ const Cart = () => {
        border-gray-400">
         <span>Total</span>
         <h4 className="text-end">$ {totalPrice}</h4>
-        <button
+        <button onClick={handleClickCheckout}
           className="w-full col-span-2 bg-red-500 py-2 text-white font-bold hover:bg-red-400
            transition-colors rounded-sm mt-6"
         >

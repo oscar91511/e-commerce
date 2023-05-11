@@ -1,6 +1,16 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { deleteProductCart } from '../../slices/cart.slice'
 
 const CartProduct = ({product}) => {
+
+
+const dispatch = useDispatch()
+
+const handleClickDelete = () => {
+  dispatch(deleteProductCart(product.id));
+}
+
   return (
     <article>
       <section className='grid grid-cols-[auto_1fr_auto] gap-1 '>
@@ -8,7 +18,7 @@ const CartProduct = ({product}) => {
           <img className='w-full h-full object-contain' src={product.product.images[2].url} alt="" />
            </div>
            <h4>{product.product.title}</h4>
-          <i className='bx bxs-trash text-red-500 cursor-pointer'></i>
+          <i onClick={handleClickDelete} className='bx bxs-trash text-red-500 cursor-pointer'></i>
           <div className='flex items-center'>
                 <button className='border-[1px] p-2 px-2
                  hover:bg-red-500 hover:text-white transition-colors '>

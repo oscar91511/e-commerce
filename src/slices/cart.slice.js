@@ -32,8 +32,21 @@ export const getCartProducts = () => (dispatch) => {
 export const addProductCart = (data) => (dispatch) => {
     axiosEcommerce
     .post("cart", data, getConfig())
-    .then((res) => dispatch(getCartProducts()))
+    .then(() => dispatch(getCartProducts()))
     .catch((err) => console.log(err))
+}
+
+export const deleteProductCart = (id) => (dispatch) => {
+    axiosEcommerce
+    .delete(`cart/${id}`, getConfig())
+    .then(() => dispatch(getCartProducts()))
+    .catch((err) => console.log(err));
+}
+
+export const purchaseCart = () => (dispatch) => {
+    axiosEcommerce.post("purchases", {}, getConfig())
+    .then(() => dispatch(getCartProducts()))
+    .catch((err) => console.log(err));
 }
 
 export default cartSlice.reducer
