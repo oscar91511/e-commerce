@@ -24,7 +24,7 @@ const CartProduct = ({product}) => {
        
       </section>
       <h4 className="mt-2 text-end">Total: <span 
-      className="font-bold">$ 850</span> </h4>
+      className="font-bold">$ {(product.quantity * product.product.price).toFixed(1)}</span> </h4>
     </article>
   )
 }

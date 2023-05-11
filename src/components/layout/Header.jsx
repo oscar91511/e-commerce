@@ -1,15 +1,17 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
 import { changeIsShowCart } from '../../slices/cart.slice'
 
 const Header = () => {
-
+  const { token } = useSelector((store) => store.userInfo);
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   
   const handleClickChangeShowCart = () => {
-    dispatch(changeIsShowCart())
-  }
+    if(!token) return navigate("/login")
+    dispatch(changeIsShowCart());
+  };
   
   return (
     <section className=' pt-4 py-4 flex justify-between items-center md:border-[1px] '>

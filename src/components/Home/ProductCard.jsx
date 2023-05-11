@@ -1,11 +1,14 @@
-import React from "react";
+
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addProductCart } from "../../slices/cart.slice";
 
 const ProductCard = ({ product }) => {
+    const dispatch = useDispatch();
 
     const handleClickAddProduct = (e) => {
-        e.preventDefault()
-        console.log("product agg")
+        e.preventDefault();
+        dispatch(addProductCart({productId: product.id, quantity: 1}))
     }
      
   return (
