@@ -14,7 +14,7 @@ const Header = () => {
   };
   
   return (
-    <section className=' pt-4 py-4 flex justify-between items-center md:border-[1px] '>
+    <section className='  pt-4 py-4 flex justify-between items-center md:border-[1px] '>
       <Link to="/">
         <h1 className='text-3xl hover:text-red-400 text-red-500 p-2 sm:pl-6 font-bold'>Amazing </h1>
       </Link>

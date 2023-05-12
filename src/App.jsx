@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import ProtectedAuth from "./components/auth/ProtectedAuth";
 import Purchases from "./pages/Purchases";
 import Cart from "./components/cart/Cart";
+import Footer from "./components/layout/Footer";
 
 
 
@@ -33,7 +34,11 @@ function App() {
         <Route path="/*" element={<NotFound />} />
 
 
-      </Routes>
+
+
+      </Routes >
+
+      <Footer />
 
       <Cart />
     </section>
