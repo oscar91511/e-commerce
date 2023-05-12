@@ -41,14 +41,14 @@ const Cart = () => {
 
   return (
     <section
-      className={`mt-8 fixed top-[60px] sm:top-[60px] min-h-[calc(100vh_-_60px)]
+      className={`mt-8 rounded-md fixed top-[60px] sm:top-[60px] min-h-[calc(100vh_-_60px)]
      bg-white shadow-xl h-screen 
        w-[300px] 
        ${
          isShowCart && token ? "right-0" : "-right-full"
        } duration-200 p-3 grid grid-rows-[auto_1fr_auto]`}
     >
-      <h2 className="text-xl font-bold">Shopping card</h2>
+      <h2 className="text-xl font-bold ">Shopping card</h2>
       <i
         onClick={handleClickChangeShowCart}
         className="bx bx-x absolute top-2 right-3 text-xl hover:text-red-500
