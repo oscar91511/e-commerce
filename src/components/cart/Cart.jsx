@@ -1,22 +1,37 @@
 import React, { useEffect } from "react";
-import { useDispatch,  useSelector } from "react-redux";
-import { changeIsShowCart, getCartProducts, purchaseCart } from "../../slices/cart.slice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  changeIsShowCart,
+  getCartProducts,
+  purchaseCart,
+} from "../../slices/cart.slice";
 import CartProduct from "./CartProduct";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { isShowCart, products } = useSelector((store) => store.cart);
-  const {token} = useSelector((store) => store.userInfo);
+  const { token } = useSelector((store) => store.userInfo);
   const dispatch = useDispatch();
 
   const handleClickChangeShowCart = () => {
     dispatch(changeIsShowCart());
   };
 
-  const totalPrice = products.reduce(( acc, curr ) => acc + curr.quantity * (curr.product.price), 0)
+  const totalPrice = products.reduce(
+    (acc, curr) => acc + curr.quantity * curr.product.price,
+    0
+  );
 
   const handleClickCheckout = () => {
-    dispatch(purchaseCart())
-  }
+    dispatch(purchaseCart()) |
+      Swal.fire({
+        position: "justify-center",
+        icon: "success",
+        title: "purchase completed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+  };
 
   useEffect(() => {
     if (isShowCart) {
@@ -47,18 +62,20 @@ const Cart = () => {
         ))}
       </section>
       {/* checkout */}
-      <section className="grid grid-cols-2 py-10 border-t-[1px]
-       border-gray-400">
+      <section
+        className="grid grid-cols-2 py-10 border-t-[1px]
+       border-gray-400"
+      >
         <span>Total</span>
         <h4 className="text-end">$ {totalPrice}</h4>
-        <button onClick={handleClickCheckout}
+        <button
+          onClick={handleClickCheckout}
           className="w-full col-span-2 bg-red-500 py-2 text-white font-bold hover:bg-red-400
            transition-colors rounded-sm mt-6"
         >
           Checkout
         </button>
       </section>
-      
     </section>
   );
 };

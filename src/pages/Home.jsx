@@ -1,6 +1,4 @@
-import axios from "axios"
 import { useEffect, useMemo, useState } from "react"
-import { get } from "react-hook-form"
 import ProductCard from "../components/Home/ProductCard"
 import { axiosEcommerce } from "../utils/configAxios"
 
@@ -59,14 +57,14 @@ const handleClickCategory = (e) =>{
       <form onSubmit={handleSubmit}>
         <div className="  mt-5 flex pb-4 justify-center">
           <input className="py-2 rounded-[8px] border-[1px]  shadow-2xl sm:px-24 font-semibold " id="productName" type="text" placeholder="What are you looking for?" />
-          <button className="rounded-[8px] border-[1px] px-5 hover:bg-red-500/90 bg-red-500"><i className='bx bx-search text-white '></i></button>
+          <button className="rounded-[8px]  border-[1px] px-5 hover:bg-red-500/90 bg-red-500"><i className='bx bx-search text-white '></i></button>
         </div>
 
-        <ul className=" sm:justify-start gap-5 sm:border-r flex flex-grow   border-4 border-s-0 border-r-0 border-double  
+        <ul className=" sm:justify-start gap-5  flex flex-grow border-4 border-s-0 border-r-0 border-double  
          sm:text-red-500  sm:hover:text-black  p-5  sm:gap-6 items-center justify-center">
           <li className="cursor-pointer  hover:text-red-500" onClick={handleClickCategory} data-category={0}>All</li>
           {
-            categories.map(category =><li className="cursor-pointer hover:text-red-500" onClick={handleClickCategory} data-category={category.id} key={category.id}>{category.name}</li>)
+            categories.map(category =><li className=" cursor-pointer hover:text-red-500" onClick={handleClickCategory} data-category={category.id} key={category.id}>{category.name}</li>)
           }
         </ul>
       </form>
