@@ -21,6 +21,6 @@
 
 [Pokedex](https://ecommerce-store-proyect6.netlify.app/ "Amazing")
 
-![Scremshot](https://i.ibb.co/M2kdSLv/amazing.png)
+![Scremshot](https://i.ibb.co/M2kdSLv/amazing-2.png)
 
-![scremshot](https://i.ibb.co/K7k1vR4/amazing-2.png)
+![scremshot](https://i.ibb.co/K7k1vR4/amazing.png)
