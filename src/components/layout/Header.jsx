@@ -19,7 +19,7 @@ const Header = () => {
         <h1 className='text-4xl hover:text-red-400 text-red-500 p-2 sm:pl-6 font-bold'>Amazing </h1>
       </Link>
 
-      <nav className=' text-2xl flex md:gap-20 gap-8 px-10  '>
+      <nav className=' z-10 text-2xl flex md:gap-20 gap-8 px-10  '>
       <Link to="/login" >
           <i className=' hover:text-red-500  text-black bx bx-user'></i>
           </Link>
