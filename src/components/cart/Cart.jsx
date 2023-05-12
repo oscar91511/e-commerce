@@ -41,7 +41,7 @@ const Cart = () => {
 
   return (
     <section
-      className={`fixed top-[40px] min-h-[calc(100vh_-_60px)]
+      className={` fixed top-[40px] min-h-[calc(100vh_-_60px)]
      bg-white shadow-xl h-screen 
        w-[300px] 
        ${

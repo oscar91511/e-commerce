@@ -53,7 +53,7 @@ const handleClickCategory = (e) =>{
   }, [currentCategory])
 
   return (
-    <main className="px-2 ">
+    <main className="px-2 bg-yellow-100/30">
       <form onSubmit={handleSubmit}>
         <div className="  mt-5 flex pb-4 justify-center">
           <input className="py-2 rounded-[8px] border-[1px]  shadow-2xl sm:px-24 font-semibold " id="productName" type="text" placeholder="What are you looking for?" />

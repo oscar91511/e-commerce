@@ -19,7 +19,7 @@ const CartProduct = ({ product }) => {
 
   return (
     <article>
-      <section className="grid grid-cols-[auto_1fr_auto] gap-1 ">
+      <section className=" grid grid-cols-[auto_1fr_auto] gap-1 ">
         <div className="h-[90px] aspect-square row-span-2 p-2">
           <img
             className="w-full h-full object-contain"

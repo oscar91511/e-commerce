@@ -13,7 +13,7 @@ import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <section className="font-['Yantramanav'] grid grid-rows-[auto_1fr] min-h-screen " >
+    <section className="font-['Yantramanav']  grid grid-rows-[auto_1fr] min-h-screen " >
 
       <Header />
 

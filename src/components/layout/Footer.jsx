@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <article>
-      <footer className="flex gap-2 p-4 justify-center border-t-2 ">
+      <footer className="bg-yellow-400/80 flex gap-2 p-4 justify-center border-t-2 ">
         <a
           className="text-4xl hover:text-red-500"
           target="_blank"
@@ -30,7 +30,7 @@ const Footer = () => {
         </a>
       </footer>
 
-      <span className="  text-black font-semibold pb-2 flex items-center justify-center">
+      <span className=" bg-yellow-400/80 text-black font-semibold pb-2 flex items-center justify-center">
         © Todos los derechos reservados 2023{" "}
       </span>
     </article>
