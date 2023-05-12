@@ -62,7 +62,7 @@ const handleClickCategory = (e) =>{
           <button className="rounded-[8px] border-[1px] px-5 hover:bg-red-500/90 bg-red-500"><i className='bx bx-search text-white '></i></button>
         </div>
 
-        <ul className=" sm:border-r flex flex-wrap  gap-6  border-4 border-s-0 border-r-0 border-double  
+        <ul className=" sm:justify-start gap-5 sm:border-r flex flex-grow   border-4 border-s-0 border-r-0 border-double  
          sm:text-red-500  sm:hover:text-black  p-5  sm:gap-6 items-center justify-center">
           <li className="cursor-pointer  hover:text-red-500" onClick={handleClickCategory} data-category={0}>All</li>
           {

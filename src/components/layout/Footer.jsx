@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <article>
-      <footer className="flex gap-2 p-4 justify-center ">
+      <footer className="flex gap-2 p-4 justify-center border-t-2 ">
         <a
           className="text-4xl hover:text-red-500"
           target="_blank"
