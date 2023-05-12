@@ -41,7 +41,7 @@ const Cart = () => {
 
   return (
     <section
-      className={` fixed top-[40px] min-h-[calc(100vh_-_60px)]
+      className={` fixed top-[60px] sm:top-[60px] min-h-[calc(100vh_-_60px)]
      bg-white shadow-xl h-screen 
        w-[300px] 
        ${
@@ -63,7 +63,7 @@ const Cart = () => {
       </section>
       {/* checkout */}
       <section
-        className="grid grid-cols-2 py-10 border-t-[1px]
+        className="grid grid-cols-2 py-20 border-t-[1px]
        border-gray-400"
       >
         <span>Total</span>

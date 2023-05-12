@@ -69,16 +69,16 @@ const ProductDetail = ({ productId }) => {
 
   return (
     <>
-      <section className=" flex gap-2 items-center justify-center">
+      <section className="  flex gap-2 items-center justify-center">
         <Link to="/">Home</Link>
-        <div className="h-[6px] aspect-square bg-red-500 rounded-s-full"></div>
-        <span className="font-bold">{productData?.title}</span>
+        <div className="h-[6px] aspect-square  bg-red-500 rounded-s-full"></div>
+        <span className="font-bold ">{productData?.title}</span>
       </section>
 
-      <section className="grid gap-6 px-4 sm:grid-cols-2 sm:items-center max-w-[1000px] mx-auto">
+      <section className="bg-white  grid gap-6 px-4 sm:grid-cols-2 sm:items-center max-w-[1000px] mx-auto">
         {/* Slider*/}
-        <section className="overflow-hidden ">
-          <section className={`flex w-[300%] ${stylePositionImages[imageToShow]} duration-200`}>
+        <section className="overflow-hidden bg-white ">
+          <section className={` flex w-[300%] ${stylePositionImages[imageToShow]} duration-200`}>
             <div className="h-[300px] w-[calc(100%_/_3)] p-4">
               <img
                 className="h-full w-full object-contain"
@@ -86,7 +86,7 @@ const ProductDetail = ({ productId }) => {
                 alt=""
               />
             </div>
-            <div className="h-[300px] w-[calc(100%_/_3)] p-4">
+            <div className="h-[300px] w-[calc(100%_/_3)] p-4 ">
               <img
                 className="h-full w-full  object-contain"
                 src={productData?.images[1].url}
