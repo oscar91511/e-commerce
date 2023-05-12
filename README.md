@@ -3,7 +3,7 @@
 
 # Ecommerce-Amazing
 
-*we worlk on ecommer Amazing Store .*
+*we work on e-commer Amazing Store using react Routes .*
 
 ## sections
 
