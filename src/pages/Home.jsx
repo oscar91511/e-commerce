@@ -56,7 +56,7 @@ const handleClickCategory = (e) =>{
     <main className="px-1 bg-yellow-100/30">
       <form onSubmit={handleSubmit}>
         <div className="  mt-5 flex pb-4 justify-center">
-          <input className="py-2 px-6 rounded-[8px] border-[1px]  shadow-2xl sm:px-24  " id="productName" type="text" placeholder="What are you looking for?" />
+          <input className="py-2 px-6 rounded-[8px] border-[1px] sm:w-[380px]  w-[240px] shadow-2xl sm:px-24  " id="productName" type="text" placeholder="What are you looking for?" />
           <button className="rounded-[8px]  border-[1px] px-4 hover:bg-red-500/90 bg-red-500"><i className='bx bx-search text-white '></i></button>
         </div>
 
