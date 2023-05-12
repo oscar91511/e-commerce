@@ -55,22 +55,22 @@ const handleClickCategory = (e) =>{
   }, [currentCategory])
 
   return (
-    <main className="px-2  ">
+    <main className="px-2">
       <form onSubmit={handleSubmit}>
-        <div className="mt-5 flex justify-center">
-          <input className="py-2 border-[1px] shadow-2xl sm:px-24 font-semibold " id="productName" type="text" placeholder="Wha are you looking for?" />
-          <button className="border-[1px] px-5 bg-red-500"><i className='bx bx-search'></i></button>
+        <div className="mt-5 flex  justify-center">
+          <input className="py-2 rounded-[8px] border-[1px]  shadow-2xl sm:px-24 font-semibold " id="productName" type="text" placeholder="What are you looking for?" />
+          <button className="rounded-[8px] border-[1px] px-5 hover:bg-red-500/90 bg-red-500"><i className='bx bx-search text-white '></i></button>
         </div>
 
-        <ul>
-          <li className="cursor-pointer" onClick={handleClickCategory} data-category={0}>All</li>
+        <ul className="flex  hover:text-red-500 py-5 gap-1 sm:gap-6 items-center justify-center">
+          <li className="cursor-pointer hover:text-red-500" onClick={handleClickCategory} data-category={0}>All</li>
           {
             categories.map(category =><li className="cursor-pointer" onClick={handleClickCategory} data-category={category.id} key={category.id}>{category.name}</li>)
           }
         </ul>
       </form>
 
-      <section className="grid gap-8 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(220px,_320px))] justify-center">
+      <section className=" grid gap-4 pb-20 sm:gap-8 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(220px,_320px))] justify-center">
         {
           productsByName.map(product => <ProductCard key={product.id} product={product} />)
         }

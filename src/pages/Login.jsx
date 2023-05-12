@@ -25,8 +25,8 @@ const Login = () => {
 
       {
         token ? (
-           <section className='bg-white rounded-md p-4  w-[300px] text-center grid gap-6'>
-            <i className='bx bxs-user-circle text-6xl '></i>
+           <section className='bg-white rounded-md p-4  w-[200px] text-center grid gap-6'>
+            <div><img src="/images/logout.png " alt="" /></div>
             <h3 className='capitalize'>{user?.firstName} {user?.lastName}</h3>
             <button onClick={handleClickLogout} className='bg-red-500 text-white py-2 rounded-md w-full block'>Logout</button>
            </section>

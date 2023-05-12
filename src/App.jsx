@@ -17,6 +17,7 @@ function App() {
       <Header />
 
       <Routes>
+        
         <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
@@ -30,6 +31,7 @@ function App() {
         <Route path="/products/:id" element={<Products />}/>
 
         <Route path="/*" element={<NotFound />} />
+
 
       </Routes>
 

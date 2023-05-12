@@ -18,11 +18,11 @@ const PurchaseCard = ({ purchase }) => {
       </section>
 
       <section className="grid justify-center gap-3 sm:grid-cols-3">
-        <span className="text-gray-400">
+        <span className="text-gray-400/90">
           {formatDateDDMMYYYY(purchase.createdAt)}{" "}
         </span>
         <div>
-          <span className="p-2 border-[1px] border-gray-400">
+          <span className="p-2 border-[1px] text-gray-400/90">
             {purchase.quantity}
           </span>
         </div>
